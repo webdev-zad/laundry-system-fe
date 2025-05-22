@@ -4,8 +4,8 @@ let socket: Socket | null = null;
 
 export const initializeSocket = (): Socket => {
   if (!socket) {
-    // Use the same base URL as your API but without the /api path
-    const baseUrl = "http://192.168.1.5:5000";
+    // Use the environment variable for the base URL
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
     socket = io(baseUrl);
 
     socket.on("connect", () => {

@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an axios instance with default config
 const api = axios.create({
-  baseURL: "http://192.168.1.5:5000/api", // Halimbawa: "http://192.168.1.100:5000/api"
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://your-vercel-deployment-url.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
