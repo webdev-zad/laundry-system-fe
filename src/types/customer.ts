@@ -20,8 +20,8 @@ export interface Customer {
     tasks: number;
   };
   // Loyalty program fields
-  loyaltyPoints: number;
-  loyaltyTier: "bronze" | "silver" | "gold" | "platinum";
+  loyaltyPoints?: number;
+  loyaltyTier?: "bronze" | "silver" | "gold" | "platinum";
   joinDate?: string;
   totalSpent?: number;
 }
